@@ -27,7 +27,7 @@
     <DocumentationFile>bin\Debug\Rewrite.xml</DocumentationFile>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Commandlineparameters>--assembly ../../OpenTK/Debug/OpenTK.dll --signing-key ../../../OpenTK.snk --debug</Commandlineparameters>
+    <Commandlineparameters>--assembly ../../OpenTK/Debug/OpenTK.dll --debug</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,19 +38,10 @@
     <DocumentationFile>bin\Release\Rewrite.xml</DocumentationFile>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Commandlineparameters>--assembly ../../OpenTK/Release/OpenTK.dll --signing-key ../../../OpenTK.snk</Commandlineparameters>
+    <Commandlineparameters>--assembly ../../OpenTK/Release/OpenTK.dll</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\OpenTK.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\OpenTK.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,9 +56,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\OpenTK.snk">
-      <Link>OpenTK.snk</Link>
-    </None>
     <None Include="paket.references" />
   </ItemGroup>
   <ItemGroup>

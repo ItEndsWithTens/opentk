@@ -74,10 +74,7 @@
     <DebugType>none</DebugType>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>True</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\OpenTK.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -151,9 +148,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="XmlSpecReader.cs" />
-    <None Include="..\..\OpenTK.snk">
-      <Link>OpenTK.snk</Link>
-    </None>
     <None Include="paket.references" />
     <None Include="Specifications\GL2\gl.tm" />
     <None Include="Specifications\Glx\glx.spec">
