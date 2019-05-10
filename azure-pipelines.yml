@@ -1,0 +1,16 @@
+trigger:
+- arbatel
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+- task: BatchScript@1
+  inputs:
+    filename: build.cmd
+    arguments: NuGet
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'NuGetPackages'
+    targetPath: 'bin'
