@@ -10,7 +10,15 @@ steps:
     filename: build.cmd
     arguments: NuGet
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'bin'
+    Contents: |
+      *.nupkg
+      !*OpenTK.GLWidget*.nupkg
+    TargetFolder: '$(Build.ArtifactsStagingDirectory)'
+
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'NuGetPackages'
-    targetPath: 'bin'
+    targetPath: '$(Build.ArtifactsStagingDirectory)'
