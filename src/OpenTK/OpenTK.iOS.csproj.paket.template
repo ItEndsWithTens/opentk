@@ -1,15 +1,14 @@
 type project
-id OpenTK.iOS
+id Arbatel.OpenTK.iOS
+title Arbatel.OpenTK.iOS
 owners
-    opentk thefiddler
+    ItEndsWithTens
 authors
-    The Open Toolkit Team
+    The Open Toolkit Team, Rob Martens
 projectUrl
-    http://www.opentk.com
-iconUrl
-    https://raw.githubusercontent.com/opentk/opentk/master/docs/files/img/logo.png
+    https://github.com/ItEndsWithTens/opentk
 licenseUrl
-    http://github.com/opentk/opentk/blob/master/License.txt
+    https://github.com/ItEndsWithTens/opentk/blob/master/License.txt
 requireLicenseAcceptance
     false
 copyright
@@ -19,8 +18,9 @@ tags
 summary
     A set of fast, low-level C# bindings for OpenGL, OpenGL ES and OpenAL.
 description
-    The Open Toolkit is set of fast, low-level C# bindings for OpenGL, OpenGL ES and OpenAL. It runs on all major platforms and powers hundreds of apps, games and scientific research.
-    OpenTK provides several utility libraries, including a math/linear algebra package, a windowing system, and input handling.
+    A customized version of OpenTK 3.0.1 for use in my own projects, containing whatever bug fixes I find useful.
+
+    My primary motivation was to get RenderDoc working properly in Windows, since I couldn't find an existing version on NuGet that had the appropriate fix. Please only use at your own risk! I'm comfortable depending on it for my own work, but I'm not in a position to provide much in the way of support.
 include-pdbs true
 excludeddependencies
     StyleCop.Analyzers

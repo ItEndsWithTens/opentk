@@ -25,7 +25,7 @@ open System.Diagnostics
 
 // The name of the project
 // (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
-let project = "OpenTK"
+let project = "Arbatel.OpenTK"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
@@ -33,10 +33,12 @@ let summary = "A set of fast, low-level C# bindings for OpenGL, OpenGL ES and Op
 
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
-let description = "The Open Toolkit is set of fast, low-level C# bindings for OpenGL, OpenGL ES and OpenAL. It runs on all major platforms and powers hundreds of apps, games and scientific research."
+let description = "A customized version of OpenTK 3.0.1 for use in my own projects, containing whatever bug fixes I find useful.
+
+My primary motivation was to get RenderDoc working properly in Windows, since I couldn't find an existing version on NuGet that had the appropriate fix. Please only use at your own risk! I'm comfortable depending on it for my own work, but I'm not in a position to provide much in the way of support."
 
 // List of author names (for NuGet package)
-let authors = [ "Stefanos Apostolopoulos" ]
+let authors = [ "Stefanos Apostolopoulos", "Rob Martens" ]
 
 // Tags for your project (for NuGet package)
 let tags = "OpenTK OpenGL OpenGLES GLES OpenAL C# F# VB .NET Mono Vector Math Game Graphics Sound"
@@ -51,14 +53,14 @@ let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
 
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted
-let gitOwner = "opentk"
+let gitOwner = "ItEndsWithTens"
 let gitHome = "https://github.com/" + gitOwner
 
 // The name of the project on GitHub
 let gitName = "opentk"
 
 // The url for the raw files hosted
-let gitRaw = environVarOrDefault "gitRaw" "https://raw.github.com/opentk"
+let gitRaw = environVarOrDefault "gitRaw" "https://raw.github.com/ItEndsWithTens"
 
 // --------------------------------------------------------------------------------------
 // END TODO: The rest of the file includes standard build steps
@@ -196,8 +198,8 @@ Target "NuGet" (fun _ ->
         if isXamarinPlatform then
             []
         else
-            [ "OpenTK.Android"
-              "OpenTK.iOS" ]
+            [ "Arbatel.OpenTK.Android"
+              "Arbatel.OpenTK.iOS" ]
 
 
     Paket.Pack(fun p ->
