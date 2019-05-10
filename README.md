@@ -1,4 +1,6 @@
 [![Build Status](https://dev.azure.com/robertmartens0491/Arbatel.OpenTK/_apis/build/status/ItEndsWithTens.opentk?branchName=arbatel)](https://dev.azure.com/robertmartens0491/Arbatel.OpenTK/_build/latest?definitionId=3&branchName=arbatel)
+[![Arbatel.OpenTK NuGet](https://img.shields.io/nuget/v/Arbatel.OpenTK.svg?label=Arbatel.OpenTK)](https://www.nuget.org/packages/Arbatel.OpenTK/)
+[![Arbatel.OpenTK NuGet](https://img.shields.io/nuget/v/Arbatel.OpenTK.GLControl.svg?label=Arbatel.OpenTK.GLControl)](https://www.nuget.org/packages/Arbatel.OpenTK.GLControl/)
 
 This is a personal fork of [OpenTK](https://github.com/opentk/opentk) for use in my own projects, in particular [Arbatel](https://github.com/ItEndsWithTens/Arbatel), containing any bug fixes and tweaks I'm interested in.
 
